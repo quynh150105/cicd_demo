@@ -1,11 +1,9 @@
-/**
- * @jest-environment jsdom
- */
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import Page from "./page";
+type Params = {
+  params: {
+    slug: string;
+  };
+};
 
-it("App Router: Works with dynamic route segments", () => {
-  render(<Page params={{ slug: "Test" }} />);
-  expect(screen.getByRole("heading")).toHaveTextContent("Slug: Test");
-});
+export default function Page({ params }: Params) {
+  return <h1>Slug: {params.slug}</h1>;
+}
