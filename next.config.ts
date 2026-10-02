@@ -12,4 +12,8 @@ const nextConfig: NextConfig = {
   },
 };
 
+export function generateStaticParams() {
+  return [{ slug: "Test" }, { slug: "hello" }, { slug: "nextjs" }];
+}
+
 export default nextConfig;
