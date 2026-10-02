@@ -4,7 +4,9 @@
 import { render, screen } from "@testing-library/react";
 import Page from "./page";
 
-it("App Router: Works with Server Components", () => {
+it("renders the home page", () => {
   render(<Page />);
-  expect(screen.getByRole("heading")).toHaveTextContent("App Router");
+  expect(
+    screen.getByRole("heading", { name: /welcome to next\.js!/i }),
+  ).toBeInTheDocument();
 });
