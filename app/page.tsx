@@ -1,7 +1,9 @@
+import Home from "@/pages/home";
+
 export const metadata = {
-  title: "App Router",
+  title: "Create Next App",
 };
 
 export default function Page() {
-  return <h1>App Router</h1>;
+  return <Home />;
 }
