@@ -13,5 +13,16 @@ export function generateStaticParams() {
 }
 
 export default function Page({ params }: Params) {
-  return <h1>Slug: {params.slug}</h1>;
+  <>
+    <h1>Slug: {params.slug}</h1>;
+    <p>
+      {" "}
+      This page is generated at build time and is served as a static HTML file
+    </p>
+    <p>
+      {" "}
+      This page is generated at build time and is served as a static HTML file
+      hâha
+    </p>
+  </>;
 }
